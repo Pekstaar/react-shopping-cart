@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import formatCurrency from '../util';
+
 class Products extends Component {
   render() {
     return (
@@ -8,7 +9,7 @@ class Products extends Component {
             {this.props.products.map(product =>(
                 <li key={product.id}>
                     <div className="product">
-                        <a href={"#" + product.id}>
+                        <a href={"#" + (product._id)}>
                              <img src={product.image} alt={product.title}></img>
                              <p>
                                  {product.title}

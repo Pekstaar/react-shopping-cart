@@ -48,5 +48,30 @@
         "availableSizes": ["XL", "XXL"],
         "price": 49.9
       }
+      ,
+      {
+        "_id": "dress7",
+        "image": "https://image.kilimall.com/kenya/shop/store/goods/6275/2020/09/6275_06540051111368823_360.jpg.webp",
+        "title": "Midi tea dress in blue and red spot",
+        "description": "covers her shoulders almost fully and flows down into a graceful sweetheart neckline",
+        "availableSizes": ["S","XS", "XXL"],
+        "price": 45.9
+      },
+      {
+        "_id": "dress8",
+        "image": "https://i2.wp.com/www.thefashionparlour.com/wp-content/uploads/2019/01/tbdress-com.jpg?resize=510%2C680&ssl=1",
+        "title": "Bodycon Dress dress in black vinyl",
+        "description": "hugs your figure and accentuates your assets. ",
+        "availableSizes": ["S","Xl", "XXL"],
+        "price": 43.5
+      },
+      {
+        "_id": "dress9",
+        "image": "https://i.pinimg.com/originals/f8/26/5f/f8265f4623867f978825583c9b42be53.jpg",
+        "title": "Tea Length Dress",
+        "description": "hugs your figure and accentuates your assets. ",
+        "availableSizes": ["S","M", "L","XS"],
+        "price": 52.5
+      }
     ]
   }

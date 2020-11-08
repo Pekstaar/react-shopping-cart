@@ -129,6 +129,7 @@ footer{
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
   border-radius: 4px;
+  color: #fff;
 }
 .button:hover{
   box-shadow: 0 0.6em 0.5em -0.4em;
@@ -136,7 +137,7 @@ footer{
   transition: transform 0.3s ease-in-out;
 }
 .button.primary{
-  background-color: #ee8d32;
+  background-color: #f77d2b;
 }
 
 /* Filter class */
@@ -209,4 +210,36 @@ footer{
 .total > div,
 .total > button{
   flex: 1;
+}
+/* Chechout section */
+.form{
+  width: 100%;
+}
+.form-container{
+  border-radius: 5px;
+  list-style: none;
+  width: 100%;
+  background-color: #f7f7f7;
+  padding: 50px 20px;
+}
+.form-container li{
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+
+}
+input{
+  border-style: none;
+  padding: 1.2rem;
+  height: 20px;
+  background-color: #fff;
+  border-bottom: 1px #000 solid;
+}
+.form-container button{
+  width: 75%;
+  padding: 0.5rem;
+  margin-left: 35px;
+  border: 0.1rem #c0c0c0 solid;
+  background-color: #0dd817;
+  color: #000;
 }

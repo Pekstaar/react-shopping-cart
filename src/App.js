@@ -11,19 +11,28 @@ class App extends React.Component {
   
     this.state = {
        products: data.products,
-       cartItems:[],
+       cartItems:localStorage.getItem("cartItems") ?
+                 JSON.parse(localStorage.getItem("cartItems")) : [],
        size: "",
        sort: "",
     };
   }
 
+  // proceeding order function
+  createOrder = (order) =>{
+    alert(`Need to save ${order.name}'s data` );
+  }
+
+  // delete item from cart method
   removeFromCart = (product) => {
     const cartItems = this.state.cartItems.slice();
     this.setState({
       cartItems: cartItems.filter(x=> x._id !== product._id),
     });    
+    localStorage.setItem("cartItems", JSON.stringify(cartItems.filter(x=> x._id !== product._id))); 
   };
 
+  // add product to cart for buying
   addToCart = (product) => {
     const cartItems = this.state.cartItems.slice();
     let alreadyInCart=false;
@@ -37,6 +46,7 @@ class App extends React.Component {
       cartItems.push({...product, count: 1});
     }
     this.setState({cartItems});
+    localStorage.setItem("cartItems", JSON.stringify(cartItems)); 
   }
 
   sortProducts =(event)=>{
@@ -44,7 +54,7 @@ class App extends React.Component {
     
     const sort = event.target.value;
 
-    console.log(event.target.value);
+    // console.log(event.target.value);
     this.setState((state) => ({ 
         sort: sort,
         products: state.products
@@ -63,6 +73,7 @@ class App extends React.Component {
   filterProducts = (event) => {
     //implementation
     // console.log(event.target.value);
+
     if (event.target.value ==="") {
       this.setState({size:event.target.value, products:data.products});
     } else {
@@ -103,8 +114,12 @@ class App extends React.Component {
             </div>
 
             <div className="sidebar">
-              <Cart cartItems={this.state.cartItems}
-                  removeFromCart={this.removeFromCart}
+              <Cart 
+                // variables passed to props
+                cartItems={this.state.cartItems}
+                // Functions passed to props
+                removeFromCart={this.removeFromCart}
+                createOrder={this.createOrder}
               ></Cart>
             </div>
           </div>

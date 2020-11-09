@@ -3,6 +3,8 @@ import data from './data.json';
 import Products from './components/Products';
 import Filter from './components/filter';
 import Cart from './components/cart';
+import { Provider } from 'react-redux';
+import store from './store';
 
 class App extends React.Component { 
 
@@ -88,46 +90,48 @@ class App extends React.Component {
 
   render() {   
     return (
-      <div className="grid-container">
+      <Provider store={store}>
+        <div className="grid-container">
 
-        {/* Header */}
-        <header>
-          <a href="/">React Shopping cart</a>
-        </header>
+          {/* Header */}
+          <header>
+            <a href="/">React Shopping cart</a>
+          </header>
 
-        {/* body */}
-        <main>
-          <div className="content">
-            <div className="main">
+          {/* body */}
+          <main>
+            <div className="content">
+              <div className="main">
 
-              <Filter 
-              count={this.state.products.length}
-              size={this.state.size}
-              sort={this.state.sort}
-              filterProducts={this.filterProducts}
-              sortProducts={this.sortProducts}
-              ></Filter>
+                <Filter 
+                count={this.state.products.length}
+                size={this.state.size}
+                sort={this.state.sort}
+                filterProducts={this.filterProducts}
+                sortProducts={this.sortProducts}
+                ></Filter>
 
-              <Products products={this.state.products} 
-                        addToCart ={this.addToCart}
-              ></Products>
+                <Products products={this.state.products} 
+                          addToCart ={this.addToCart}
+                ></Products>
+              </div>
+
+              <div className="sidebar">
+                <Cart 
+                  // variables passed to props
+                  cartItems={this.state.cartItems}
+                  // Functions passed to props
+                  removeFromCart={this.removeFromCart}
+                  createOrder={this.createOrder}
+                ></Cart>
+              </div>
             </div>
+          </main>
 
-            <div className="sidebar">
-              <Cart 
-                // variables passed to props
-                cartItems={this.state.cartItems}
-                // Functions passed to props
-                removeFromCart={this.removeFromCart}
-                createOrder={this.createOrder}
-              ></Cart>
-            </div>
-          </div>
-        </main>
-
-        {/* footer */}
-        <footer>All rights reserved!</footer>
-      </div>
+          {/* footer */}
+          <footer>All rights reserved!</footer>
+        </div>
+      </Provider>
     );
   }
 }

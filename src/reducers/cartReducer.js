@@ -1,4 +1,4 @@
-import { act } from "react-dom/test-utils";
+
 import { ADD_TO_CART, REMOVE_FROM_CART } from "../types";
 
 export const cartReducer = (state=JSON.parse(localStorage.getItem("cartItems") || "[]"),

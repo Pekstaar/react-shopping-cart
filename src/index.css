@@ -291,3 +291,7 @@ input{
   margin: 0 2px;
   
 }
+.ref:hover{
+  font-weight: 600;
+  cursor: pointer;
+}

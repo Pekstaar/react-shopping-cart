@@ -137,7 +137,8 @@ class Cart extends Component {
   }
 }
 export default connect((state) => ({
-    cartItems: state.cart.cartItems
+    cartItems: state.cart.cartItems,
 }),
-    removeFromCart
+    {removeFromCart}
 )(Cart);
+

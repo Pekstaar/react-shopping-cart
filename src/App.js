@@ -14,7 +14,7 @@ class App extends React.Component {
 
           {/* Header */}
           <header>
-            <a href="/">React Shopping cart</a>
+            <a href="/" style={{ fontSize:"21px",fontStyle:"italic", fontWeight: "600"}}>Dressing corner</a>
           </header>
 
           {/* body */}
@@ -35,7 +35,7 @@ class App extends React.Component {
           </main>
 
           {/* footer */}
-          <footer>All rights reserved!</footer>
+          <footer> <span className="ref" style={{color:"cyan", fontSize:'16px', }}>@Pekstar-Coders::</span>&nbsp;&nbsp;All rights reserved </footer>
         </div>
       </Provider>
     );

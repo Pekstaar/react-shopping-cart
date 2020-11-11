@@ -35,7 +35,7 @@ class App extends React.Component {
           </main>
 
           {/* footer */}
-          <footer> <span className="ref" style={{color:"cyan", fontSize:'16px', }}>@Pekstar-Coders ::</span> &nbsp;&nbsp;&nbsp;&nbsp;All rights reserved </footer>
+          <footer> <span className="ref" style={{color:"cyan", fontSize:'16px', }}>@Pekstar-Coders::</span>&nbsp;&nbsp;All rights reserved </footer>
         </div>
       </Provider>
     );

@@ -295,3 +295,26 @@ input{
   font-weight: 600;
   cursor: pointer;
 }
+/* 0rder details */
+.order-details{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.order-details li {
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+.order-details li div{
+  padding: 10px;
+}
+.order-details.items{
+  text-align: right;
+  padding: 0%;
+}
+.success-message{
+  color:green;
+}

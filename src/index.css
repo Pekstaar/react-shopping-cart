@@ -46,6 +46,7 @@ header{
 header a{
   color: #ffffff;
   text-decoration: none;
+  padding-left: 20px;
 }
 main{
   grid-area: main;

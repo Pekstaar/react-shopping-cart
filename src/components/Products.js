@@ -29,7 +29,7 @@ class Products extends Component {
   render() {
     const {product} = this.state; 
     return (
-      <div>
+      <div>        
         <Fade bottom cascade>
 
           {!this.props.products?
